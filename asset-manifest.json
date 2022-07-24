@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/portfolio-web-site/static/css/main.d7eb06ac.css",
+    "main.js": "/portfolio-web-site/static/js/main.cd7b9357.js",
+    "static/js/787.28cb0dcd.chunk.js": "/portfolio-web-site/static/js/787.28cb0dcd.chunk.js",
+    "static/media/portfolio.png": "/portfolio-web-site/static/media/portfolio.12f1e679a3653db5fce1.png",
+    "static/media/webdesign.png": "/portfolio-web-site/static/media/webdesign.943e80e7d7341357ea77.png",
+    "static/media/avito.png": "/portfolio-web-site/static/media/avito.8bd3c7b3a0910d1f0703.png",
+    "static/media/Saly-13.png": "/portfolio-web-site/static/media/Saly-13.e020aec05ed7f7c57250.png",
+    "static/media/SuperToroid-Yellow-Glossy.png": "/portfolio-web-site/static/media/SuperToroid-Yellow-Glossy.8306a759086e8fc7bb18.png",
+    "static/media/Pill-Blue-Glossy.png": "/portfolio-web-site/static/media/Pill-Blue-Glossy.fa7f8c8641eebf82aace.png",
+    "static/media/vk.svg": "/portfolio-web-site/static/media/vk.bb2efd4e6ca3b7035672cb15269e56b3.svg",
+    "static/media/telegram.svg": "/portfolio-web-site/static/media/telegram.bf5e9205214e8c19e52d71d2a5dbe561.svg",
+    "static/media/github.svg": "/portfolio-web-site/static/media/github.6658e784eb797523cde67da9ace3b897.svg",
+    "index.html": "/portfolio-web-site/index.html",
+    "main.d7eb06ac.css.map": "/portfolio-web-site/static/css/main.d7eb06ac.css.map",
+    "main.cd7b9357.js.map": "/portfolio-web-site/static/js/main.cd7b9357.js.map",
+    "787.28cb0dcd.chunk.js.map": "/portfolio-web-site/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7eb06ac.css",
+    "static/js/main.cd7b9357.js"
+  ]
+}
