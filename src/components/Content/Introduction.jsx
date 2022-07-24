@@ -48,7 +48,7 @@ const Introduction = () => {
             <span
               className={style.skillSCSS}
             >
-              #SCSS
+              #SCSS 
             </span>
           </div>
         </div>
