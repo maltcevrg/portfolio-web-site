@@ -1,0 +1,330 @@
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol {
+  list-style-type: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-right: 10px;
+  @media (max-width: 600px) {
+    margin: 0;
+  }
+  .title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    margin-bottom: 15px;
+    line-height: 48px;
+    color: #f9fafb;
+    text-transform: uppercase;
+    @media (max-width: 600px) {
+      margin-top: 20px;
+      overflow-x: hidden;
+      font-size: 32px;
+    }
+    @media (max-width: 1071px) {
+      width: 100%;
+    }
+  }
+  .image {
+    border-radius: 24px;
+    max-width: 700px;
+    transition: 500ms;
+    &:hover{
+    border-radius: 34px;
+    }
+  }
+  .description {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 15px 0 25px 0;
+    color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    .github {
+      padding: 0;
+      width: fit-content;
+      display: flex;
+      .githubImg {
+        width: 3vh;
+        height: 3vh;
+        background-color: #f9fafb;
+        padding: 7px;
+        margin: 10px 0 0 0;
+        border-radius: 18px;
+      }
+      .githubText {
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 28px;
+        margin: 15px 15px 25px 0;
+        animation: color-change-2x 2s linear infinite alternate both;
+        @keyframes color-change-2x {
+          0% {
+            background: #f59e0b;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+          100% {
+            background: #ef4444;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+        }
+        &:after {
+          content: "";
+          display: flex;
+          height: 1px;
+          margin: 0 auto;
+          margin-top: 3px;
+          background: #fff;
+          transition: width 0.7s ease 0s, left 0.3s ease 0s;
+          width: 0;
+        }
+        &:hover:after {
+          width: 100%;
+          left: 50%;
+        }
+      }
+    }
+    .descript {
+      margin: 15px 0px 15px 0px;
+    }
+    .problemsAndSolves {
+      margin: 0px 0px 15px 0px;
+    }
+  }
+  .stackArray {
+    .stack {
+      display: flex;
+      flex-direction: column;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 48px;
+      color: #f9fafb;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+      margin: 0 0 50px 0;
+      .mystack {
+        font-size: 32px;
+        margin: 0 0 15px 0;
+        @media (max-width: 600px) {
+          margin-right: 70px;
+        }
+        animation: color-change-2x 2s linear infinite alternate both;
+        @keyframes color-change-2x {
+          0% {
+            background: #f59e0b;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+          100% {
+            background: #ef4444;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+        }
+      }
+      .stackElements {
+        display: flex;
+        flex-wrap: wrap;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 0;
+        .stackElement1 {
+          margin: 5px 10px 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0px 10px 0px 10px;
+          background: #f59e0b;
+          border-radius: 24px;
+          transition: all 500ms;
+          animation: ani 0.5s forwards;
+          @keyframes ani {
+            0% {
+              transform: translateX(-350%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+          &:hover {
+            padding: 0 20px 0 20px;
+            font-size: 25px;
+          }
+          @media (max-width: 600px) {
+            &:hover {
+              padding: 0px 10px 0px 10px;
+              font-size: 20px;
+            }
+          }
+        }
+        .stackElement2 {
+          margin: 5px 10px 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0px 10px 0px 10px;
+          background: #f59e0b;
+          border-radius: 24px;
+
+          transition: all 500ms;
+          animation: ani 0.7s forwards;
+          @keyframes ani {
+            0% {
+              transform: translateX(-350%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+          &:hover {
+            padding: 0 20px 0 20px;
+            font-size: 25px;
+          }
+          @media (max-width: 600px) {
+            &:hover {
+              padding: 0px 10px 0px 10px;
+              font-size: 20px;
+            }
+          }
+        }
+        .stackElement3 {
+          margin: 5px 10px 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0px 10px 0px 10px;
+          background: #f59e0b;
+          border-radius: 24px;
+
+          transition: all 500ms;
+          animation: ani 0.9s forwards;
+          @keyframes ani {
+            0% {
+              transform: translateX(-350%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+          &:hover {
+            padding: 0 20px 0 20px;
+            font-size: 25px;
+          }
+          @media (max-width: 600px) {
+            &:hover {
+              padding: 0px 10px 0px 10px;
+              font-size: 20px;
+            }
+          }
+        }
+        .stackElement4 {
+          margin: 5px 10px 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0px 10px 0px 10px;
+          background: #f59e0b;
+          border-radius: 24px;
+
+          transition: all 500ms;
+          animation: ani 1.1s forwards;
+          @keyframes ani {
+            0% {
+              transform: translateY(-350%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+
+          &:hover {
+            padding: 0 20px 0 20px;
+            font-size: 25px;
+          }
+          @media (max-width: 600px) {
+            &:hover {
+              padding: 0px 10px 0px 10px;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

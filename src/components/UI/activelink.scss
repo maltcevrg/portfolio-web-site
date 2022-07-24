@@ -1,0 +1,51 @@
+.link {
+  list-style-type: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  margin: 0px 10px 0px 10px;
+  line-height: 24px;
+  color: #f9fafb;
+  text-decoration: none;
+  display: block;
+  &:after {
+    content: "";
+    display: flex;
+    height: 1px;
+    margin: 0 auto;
+    background: #fff;
+    transition: width 0.7s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  &:hover:after {
+    width: 100%;
+    left: 50%;
+    text-decoration: underline;
+  }
+  &:active:after {
+    width: 100%;
+    left: 50%;
+  }
+}
+.activelink {
+  list-style-type: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  margin: 0px 10px 0px 10px;
+  line-height: 24px;
+  color: #f9fafb;
+  text-decoration: none;
+  display: block;
+  &:after {
+    content: "";
+    display: flex;
+    height: 1px;
+    margin: 0 auto;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 100%;
+  }
+}

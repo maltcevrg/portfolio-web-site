@@ -1,0 +1,47 @@
+.popup {
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 500ms;
+  pointer-events: none;
+  opacity: 0;
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .popupContent {
+    border-radius: 24px;
+    background-color: rgb(90, 37, 90);
+    padding: 50px;
+    width: fit-content;
+    height: fit-content;
+    transition: 500ms;
+    transform: scale(0);
+    animation: color-change-2x 3s linear infinite alternate both;
+    &.active{
+      transform: scale(1);
+    }
+    .description {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 48px;
+      color: #f9fafb;
+    }
+    @keyframes color-change-2x {
+      0% {
+        background: #f59e0b;
+      }
+      100% {
+        background: #ef4444;
+      }
+    }
+  }
+}

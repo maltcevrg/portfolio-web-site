@@ -1,0 +1,89 @@
+$md: 100vh;
+.wrapper {
+  position: relative;
+  .ui {
+    left: auto;
+    top: auto;
+    z-index: 10;
+    position: absolute;
+    // width: $md;
+    // height: $md;
+  }
+  .bcg {
+    height: 100vh;
+    background-color: #121212;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    .sphereBig {
+      background: linear-gradient(
+        180deg,
+        rgba(0, 194, 255, 0.5) 0%,
+        #ff29c3 100%
+      );
+      opacity: 0.6;
+      filter: blur(140px);
+      transform: rotate(-17.38deg);
+      width: 60vh;
+      height: 60vh;
+      position: absolute;
+      left: -200px;
+      top: -200px;
+    }
+    .sphereSmall {
+      width: 40vh;
+      height: 40vh;
+      margin-left: auto;
+      margin-top: auto;
+      .sphere {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 194, 255, 0.5) 0%,
+          #ff29c3 100%
+        );
+        opacity: 0.6;
+        filter: blur(140px);
+        width: 45vh;
+        height: 45vh;
+        position: absolute;
+        right: -15%;
+        bottom: -15%;
+      }
+      .glossy {
+        right: -0.5%;
+        bottom: 5%;
+        z-index: 11;
+        position: absolute;
+        animation: vibrate 5s linear infinite both;
+        @keyframes vibrate {
+          0% {
+            -webkit-transform: translate(0);
+            transform: translate(0);
+          }
+          20% {
+            -webkit-transform: translate(5px, -5px);
+            transform: translate(5px, -5px);
+          }
+          40% {
+            -webkit-transform: translate(5px, 5px);
+            transform: translate(5px, 5px);
+          }
+          60% {
+            -webkit-transform: translate(-5px, 5px);
+            transform: translate(-5px, 5px);
+          }
+          80% {
+            -webkit-transform: translate(-5px, -5px);
+            transform: translate(-5px, -5px);
+          }
+          100% {
+            -webkit-transform: translate(0);
+            transform: translate(0);
+          }
+        }
+      }
+    }
+  }
+}

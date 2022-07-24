@@ -1,0 +1,425 @@
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 80px;
+  margin-top: 30px;
+  margin-right: 10px;
+  overflow: auto;
+  height: 65vh;
+  .socials {
+    display: flex;
+    flex-direction: column;
+    .socialsTitle {
+      text-transform: uppercase;
+      font-size: 32px;
+      margin: 0 0 15px 0;
+    }
+    .socialsWrapper {
+      margin: 0;
+      margin-bottom: 15px;
+      display: flex;
+      .tg {
+        animation: anim 0.5s forwards;
+        @keyframes anim {
+          0% {
+            transform: translateY(350%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+      .linkedin {
+        animation: anim 0.7s forwards;
+        @keyframes anim {
+          0% {
+            transform: translateY(350%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+      .vk {
+        animation: anim 0.9s forwards;
+        @keyframes anim {
+          0% {
+            transform: translateY(350%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+      .github {
+        animation: anim 1.1s forwards;
+        @keyframes anim {
+          0% {
+            transform: translateY(350%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+      img {
+        width: 3vh;
+        // width: 50px;
+        height: 3vh;
+        // height: 50px;
+        background-color: #f9fafb;
+        padding: 7px;
+        margin: 0 10px 0 0;
+        border-radius: 18px;
+        .linked {
+          width: 5vh;
+          height: 5vh;
+        }
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    margin: 22px;
+    margin-top: 0;
+  }
+  @media (max-width: 1071px) {
+    flex-direction: column;
+  }
+  .ava {
+    width: 567px;
+    height: 567px;
+    margin: 0 auto;
+    flex-grow: 0;
+    @media (max-width: 1071px) {
+      display: none;
+    }
+  }
+  animation: an 1s forwards;
+  @keyframes an {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .titleContent {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 48px;
+    color: #f9fafb;
+    width: 50%;
+    @media (max-width: 600px) {
+      margin-top: 20px;
+      overflow-x: hidden;
+      font-size: 32px;
+    }
+    @media (max-width: 1071px) {
+      width: 100%;
+    }
+    .title {
+      margin: 0;
+    }
+    .descript {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 28px;
+      margin: 15px 0 50px 0;
+    }
+    .skills {
+      // font-family: "Noto Serif Display";
+      display: flex;
+      flex-direction: column;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 48px;
+      color: #f9fafb;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+      margin: 0 0 50px 0;
+      .mySkils {
+        font-size: 32px;
+        margin: 0 0 15px 0;
+        @media (max-width: 600px) {
+          margin-right: 70px;
+        }
+        animation: color-change-2x 2s linear infinite alternate both;
+        @keyframes color-change-2x {
+          0% {
+            background: #f59e0b;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+          100% {
+            background: #ef4444;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+        }
+      }
+      .skillElemets {
+        display: flex;
+        flex-wrap: wrap;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 0;
+        .skillReact {
+          margin: 5px 10px 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0px 10px 0px 10px;
+          background: #f59e0b;
+          border-radius: 24px;
+
+          transition: all 500ms;
+          animation: ani 0.5s forwards;
+          @keyframes ani {
+            0% {
+              transform: translateX(-350%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+          &:hover {
+            padding: 0 20px 0 20px;
+            font-size: 25px;
+          }
+          @media (max-width: 600px) {
+            &:hover {
+              padding: 0px 10px 0px 10px;
+              font-size: 20px;
+            }
+          }
+        }
+        .skillMobX {
+          margin: 5px 10px 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0px 10px 0px 10px;
+          background: #f59e0b;
+          border-radius: 24px;
+          transition: all 500ms;
+          animation: ani 0.7s forwards;
+          @keyframes ani {
+            0% {
+              transform: translateX(-350%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+          &:hover {
+            padding: 0 20px 0 20px;
+            font-size: 25px;
+          }
+          @media (max-width: 600px) {
+            &:hover {
+              padding: 0px 10px 0px 10px;
+              font-size: 20px;
+            }
+          }
+        }
+        .skillJs {
+          transition: all 500ms;
+          margin: 5px 10px 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0px 10px 0px 10px;
+          background: #f59e0b;
+          border-radius: 24px;
+          animation: ani 0.9s forwards;
+          @keyframes ani {
+            0% {
+              transform: translateX(-350%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+          &:hover {
+            padding: 0 20px 0 20px;
+            font-size: 25px;
+          }
+          @media (max-width: 600px) {
+            &:hover {
+              padding: 0px 10px 0px 10px;
+              font-size: 20px;
+            }
+          }
+        }
+        .skillHTML {
+          transition: all 500ms;
+          margin: 5px 10px 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0px 10px 0px 10px;
+          background: #f59e0b;
+          border-radius: 24px;
+
+          animation: ani 1.1s forwards;
+          @keyframes ani {
+            0% {
+              transform: translateX(-350%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+          &:hover {
+            padding: 0 20px 0 20px;
+            font-size: 25px;
+          }
+          @media (max-width: 600px) {
+            &:hover {
+              padding: 0px 10px 0px 10px;
+              font-size: 20px;
+            }
+          }
+        }
+        .skillSCSS {
+          transition: all 500ms;
+          margin-top: 5px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          padding: 0px 10px 0px 10px;
+          background: #f59e0b;
+          border-radius: 24px;
+          animation: ani 1.3s forwards;
+          @keyframes ani {
+            0% {
+              transform: translateY(-350%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+          &:hover {
+            padding: 0 20px 0 20px;
+            font-size: 25px;
+          }
+          @media (max-width: 600px) {
+            &:hover {
+              padding: 0px 10px 0px 10px;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    .name {
+      font-size: 56px;
+      background-clip: text;
+      text-emphasis-color: transparent;
+      background-clip: text;
+      margin: 0px;
+      @media (max-width: 600px) {
+        font-size: 36px;
+      }
+      animation: color-change-2x 2s linear infinite alternate both;
+      @keyframes color-change-2x {
+        0% {
+          background: #f59e0b;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        100% {
+          background: #ef4444;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+    }
+  }
+}
