@@ -1,13 +1,13 @@
 import UI from "./components/UI/UI"
 import "./App.css"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HashRouter} from "react-router-dom"
 
 function App() {
   return (
     <div className="wrapper">
-      <BrowserRouter>
+      <HashRouter>
         <UI/>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   )
 }
