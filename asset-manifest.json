@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-web-site/static/css/main.d7eb06ac.css",
-    "main.js": "/portfolio-web-site/static/js/main.c69e5b35.js",
+    "main.css": "/portfolio-web-site/static/css/main.1475d147.css",
+    "main.js": "/portfolio-web-site/static/js/main.65e1aa23.js",
     "static/js/787.28cb0dcd.chunk.js": "/portfolio-web-site/static/js/787.28cb0dcd.chunk.js",
     "static/media/portfolio.png": "/portfolio-web-site/static/media/portfolio.12f1e679a3653db5fce1.png",
     "static/media/webdesign.png": "/portfolio-web-site/static/media/webdesign.943e80e7d7341357ea77.png",
@@ -13,12 +13,12 @@
     "static/media/telegram.svg": "/portfolio-web-site/static/media/telegram.bf5e9205214e8c19e52d71d2a5dbe561.svg",
     "static/media/github.svg": "/portfolio-web-site/static/media/github.6658e784eb797523cde67da9ace3b897.svg",
     "index.html": "/portfolio-web-site/index.html",
-    "main.d7eb06ac.css.map": "/portfolio-web-site/static/css/main.d7eb06ac.css.map",
-    "main.c69e5b35.js.map": "/portfolio-web-site/static/js/main.c69e5b35.js.map",
+    "main.1475d147.css.map": "/portfolio-web-site/static/css/main.1475d147.css.map",
+    "main.65e1aa23.js.map": "/portfolio-web-site/static/js/main.65e1aa23.js.map",
     "787.28cb0dcd.chunk.js.map": "/portfolio-web-site/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7eb06ac.css",
-    "static/js/main.c69e5b35.js"
+    "static/css/main.1475d147.css",
+    "static/js/main.65e1aa23.js"
   ]
 }
